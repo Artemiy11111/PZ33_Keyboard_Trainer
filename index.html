@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Тренажёр клавиатуры</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="shell">
+      <div class="grid">
+        <section class="panel wide">
+          <h2>Поле для эксперимента</h2>
+          <input
+            id="keyboard-input"
+            class="input"
+            placeholder="Нажмите букву, цифру, Enter или стрелку"
+            autocomplete="off"
+          />
+          <p class="small">
+            Для проверки удерживайте клавишу несколько секунд, затем отпустите.
+          </p>
+        </section>
+        <section class="panel">
+          <h2>Последняя клавиша</h2>
+          <div id="last-key" class="stat">—</div>
+          <p id="key-code" class="muted">Код: —</p>
+        </section>
+        <section class="panel">
+          <h2>Состояние</h2>
+          <p id="key-state" class="status" aria-live="polite">
+            Ожидание нажатия.
+          </p>
+          <p>Нажатий: <strong id="key-count">0</strong></p>
+        </section>
+        <section class="panel wide">
+          <h2>Наблюдение за keypress</h2>
+          <p class="muted">
+            Сравните события для буквы и стрелки. Результат демонстрации
+            выводится в Console (F12).
+          </p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
